@@ -7,7 +7,7 @@ import ChatMessage from "./ChatMessage";
 import ChatInput from "./ChatInput";
 import ConversationSidebar from "./ConversationSidebar";
 import { useChat } from "@/hooks/useChat";
-import { useMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ChatInterface: React.FC = () => {
   const { 
@@ -21,7 +21,7 @@ const ChatInterface: React.FC = () => {
   } = useChat();
   
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
   const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
 
   // Toggle sidebar

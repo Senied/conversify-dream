@@ -4,7 +4,7 @@ import { ChevronLeft, MessageSquarePlus, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Conversation } from "@/hooks/useChat";
 import { cn } from "@/lib/utils";
-import { useMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { formatDistanceToNow } from "date-fns";
 
 interface ConversationSidebarProps {
@@ -24,7 +24,7 @@ const ConversationSidebar: React.FC<ConversationSidebarProps> = ({
   isOpen,
   onToggle
 }) => {
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
   
   return (
     <>
